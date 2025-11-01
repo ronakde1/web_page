@@ -49,24 +49,29 @@ footer {
 }
 
 article > img {
-    width: calc(30% - 4px);
+    width: calc(30% - 16px);
     float: left;
-    margin-right: 2px;
+    margin-right: 8px;
+    border-radius: 16px;
 }
 
 article > h2 {
-    width: calc(70% - 4px);
+    width: calc(70% - 16px);
     float: right;
-    margin-left: 2px;
+    margin-left: 8px;
 }
 
 article > p {
-    width: calc(70% - 4px);
+    width: calc(70% - 16px);
     float: right;
-    margin-left: 2px;
+    margin-left: 8px;
+    margin-right: 16px;
 }
 
 article {
     float: left;
     display: block;
+    margin: 16px;
+    border-radius: 16px;
+    background-color: #eeeeee11;
 }
