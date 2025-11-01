@@ -1,49 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0b0c10;
-    color: #e0e0e0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
 }
 
 header {
-    background-color: #1f2833;
-    padding: 20px;
-    text-align: center;
+  background: #0c1e3c;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
 }
 
-header h1 {
-    margin: 0;
-    color: #66fcf1;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
 nav a {
-    color: #c5c6c7;
-    text-decoration: none;
-    margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.hero {
-    text-align: center;
-    padding: 50px 20px;
+nav a:hover {
+  color: #ffc107;
 }
 
-.hero img {
-    max-width: 300px;
-    border-radius: 50%;
+.featured {
+  margin: 2rem auto;
+  max-width: 1000px;
 }
 
-.info {
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
+.featured img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.featured .content {
+  padding: 1rem 0;
+}
+
+.featured h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.read-more {
+  background: #0c1e3c;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  background: #ffc107;
+  color: #0c1e3c;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.news-grid article {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.news-grid article:hover {
+  transform: translateY(-5px);
+}
+
+.news-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-grid h2 {
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+.news-grid p {
+  margin: 0 1rem 1rem;
 }
 
 footer {
-    background-color: #1f2833;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background: #0c1e3c;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
 }

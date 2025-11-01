@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DailyScope News</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <!-- HEADER -->
@@ -25,44 +25,31 @@
   <main>
     <section class="featured">
       <article>
-        <img src="https://picsum.photos/900/400?random=1" alt="Featured News">
+        <img src="{{ featured.image }}" alt="Featured News">
         <div class="content">
-          <h1>Breaking: Major Developments in Global Markets</h1>
-          <p>The global stock market saw dramatic changes today as analysts weigh the impacts of ongoing economic shifts...</p>
+          <h1>{{ featured.title }}</h1>
+          <p>{{ featured.summary }}</p>
           <button class="read-more">Read More</button>
         </div>
       </article>
     </section>
 
     <section class="news-grid">
+      {% for article in articles %}
       <article>
-        <img src="https://picsum.photos/400/250?random=2" alt="News">
-        <h2>Tech Giants Announce New AI Initiative</h2>
-        <p>Several leading tech companies unveiled plans for a collaborative AI research project...</p>
+        <img src="{{ article.image }}" alt="News">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.summary }}</p>
       </article>
-      <article>
-        <img src="https://picsum.photos/400/250?random=3" alt="News">
-        <h2>Sports: Championship Finals Set to Begin</h2>
-        <p>The stage is set for one of the most anticipated sports finals in recent memory...</p>
-      </article>
-      <article>
-        <img src="https://picsum.photos/400/250?random=4" alt="News">
-        <h2>World Leaders Meet for Climate Summit</h2>
-        <p>Global leaders convened today to discuss the next phase of environmental policy...</p>
-      </article>
-      <article>
-        <img src="https://picsum.photos/400/250?random=5" alt="News">
-        <h2>Innovation: Breakthrough in Renewable Energy</h2>
-        <p>Scientists report a major advancement that could revolutionize sustainable power...</p>
-      </article>
+      {% endfor %}
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 DailyScope News | Designed by You</p>
+    <p>&copy; 2025 DailyScope News | Powered by Flask</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
