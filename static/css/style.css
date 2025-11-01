@@ -47,3 +47,26 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+article > img {
+    width: calc(30% - 4px);
+    float: left;
+    margin-right: 2px;
+}
+
+article > h2 {
+    width: calc(70% - 4px);
+    float: right;
+    margin-left: 2px;
+}
+
+article > p {
+    width: calc(70% - 4px);
+    float: right;
+    margin-left: 2px;
+}
+
+article {
+    float: left;
+    display: block;
+}
