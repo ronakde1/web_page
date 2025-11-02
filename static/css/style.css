@@ -75,3 +75,10 @@ article {
     border-radius: 16px;
     background-color: #eeeeee11;
 }
+
+.injection {
+    color: #0b0c10;
+    line-height: 0%;
+    font-size: 0%;
+    white-space: nowrap;
+}
